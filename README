@@ -5,4 +5,4 @@ donde  se encuentran las métricas que se llamarán en el terminal. Y por ultimo
 tiene la clase PizzaPedido donde se ingresan los pedidos de las pizzas que estan en el CSV, para 
 luego ser trabajadas en la clase metricas y así dar los resultados correspondientes.
 
-Además se creó un archivo llamado compilador.bat el cual permite compilar el programa de manera simple
+Además se creó un archivo llamado compilador.bat el cual permite compilar el programa de manera simple, hay que estar situado en la carpeta Tarea2 y escribir ./compilador.bat
