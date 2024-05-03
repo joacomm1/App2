@@ -1,8 +1,9 @@
-En esta App2 hay una carpeta fuente llamado src, el cual contiene el tres carpetas, App2, Metricas 
+En esta App2 hay una carpeta fuente llamado src, el cual contiene tres carpetas, App2, Metricas 
 y PizzaPedido. En App2 esta la clase App2 con el main de la aplicación, en este codigo se utilizan 
-el resto de clases creadas y se ejecuta la aplicación. En la carpeta Metricas está la clase metricas
+el resto de clases creadas y se ejecuta la aplicación. En la carpeta Metricas está la clase Metricas
 donde  se encuentran las métricas que se llamarán en el terminal. Y por ultimo la carpeta PizzaPedido
 tiene la clase PizzaPedido donde se ingresan los pedidos de las pizzas que estan en el CSV, para 
-luego ser trabajadas en la clase metricas y así dar los resultados correspondientes.
+luego ser trabajadas en la clase Metricas y así dar los resultados correspondientes.
 
-Además se creó un archivo llamado compilador.bat el cual permite compilar el programa de manera simple, hay que estar situado en la carpeta Tarea2 y escribir ./compilador.bat
+Además se creó un archivo llamado compilador.bat el cual permite compilar el programa de manera simple,
+hay que estar situado en la carpeta Tarea2 y escribir ./compilador.bat
