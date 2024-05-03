@@ -24,7 +24,7 @@ public class Metricas {
                     pls(pedidos);
                     break;
                 case "dms":
-                    dmsp(pedidos);
+                    dms(pedidos);
                     break;
                 case "dls":
                     dls(pedidos);
@@ -83,8 +83,7 @@ public class Metricas {
         String fechaMasVentas = fechaConMasVentas.getKey();
         long cantidadPizzasMasVendidas = fechaConMasVentas.getValue();
         // Mostrar los resultados
-        System.out.println("Fecha con más ventas: " + fechaMasVentas);
-        System.out.println("Cantidad de pizzas vendidas en esa fecha: " + cantidadPizzasMasVendidas);
+        System.out.println("Fecha con más ventas: " + fechaMasVentas + " Cantidad de pizzas vendidas en esa fecha: " + cantidadPizzasMasVendidas);
     }
 
     private void dlsp(List<PizzaPedido> pedidos){
@@ -95,7 +94,7 @@ public class Metricas {
                 .orElseThrow(); // Lanza una excepción si no hay pedidos
         String fechaMenosVentas = fechaConMenosVentas.getKey();
         long cantidadPizzasMenosVendidas = fechaConMenosVentas.getValue();
-        System.out.println("Fecha con menos ventas: " + fechaMenosVentas + "Cantidad de pizzas vendidas en esa fecha: " + cantidadPizzasMenosVendidas);
+        System.out.println("Fecha con menos ventas: " + fechaMenosVentas + " Cantidad de pizzas vendidas en esa fecha: " + cantidadPizzasMenosVendidas);
     }
 
     private void hp(List<PizzaPedido> pedidos){
@@ -157,6 +156,20 @@ public class Metricas {
             System.out.println("Fecha con menor venta en términos de dinero: " + fechaConMenorVenta.getKey() +
                     ", Total de ventas en esa fecha: $" + fechaConMenorVenta.getValue());}
 
+
+        private void dms(List<PizzaPedido> pedidos){Map<String, Double> ventasPorFecha = pedidos.stream()
+            .collect(Collectors.groupingBy(PizzaPedido::getOrderDate,
+                    Collectors.summingDouble(pedido -> pedido.getTotalPrice())));
+    
+    // Obtener la entrada (fecha y total de ventas) con el valor máximo
+    Map.Entry<String, Double> fechaConMayorVenta = ventasPorFecha.entrySet().stream()
+            .max(Map.Entry.comparingByValue())
+            .orElseThrow(); // Lanza una excepción si no hay ventas
+    
+    // Mostrar la fecha con la mayor venta en términos de dinero
+    System.out.println("Fecha con mayor venta en términos de dinero: " + fechaConMayorVenta.getKey() +
+            ", Total de ventas en esa fecha: $" + fechaConMayorVenta.getValue());
+}
 
 
     // Otros métodos para las métricas...
