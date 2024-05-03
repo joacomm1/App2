@@ -2,14 +2,8 @@ package src.App2;
 
 import java.io.*;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import src.PizzaPedido.PizzaPedido;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-
 import src.Metricas.Metricas;
 
 public class App2 {
@@ -50,9 +44,9 @@ public class App2 {
         }
 
 
-        Metricas metricas = new Metricas();
+        Metricas metricas = new Metricas(pedidos);
         
         // Llamar al método ejecutar de Metricas y pasarle los argumentos de la línea de comandos
-        metricas.ejecutar(args, pedidos);
+        metricas.ejecutar(args);
     }
     }

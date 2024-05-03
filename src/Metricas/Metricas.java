@@ -8,7 +8,11 @@ import java.util.stream.Collectors;
 import src.PizzaPedido.PizzaPedido;
 
 public class Metricas {
-    public void ejecutar(String[] args,List<PizzaPedido> pedidos) {
+    private final List<PizzaPedido> pedidos;
+    public Metricas(List<PizzaPedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+    public void ejecutar(String[] args) {
         List<String> metricas = Arrays.asList(args);
 
         for (String metrica : metricas) {
