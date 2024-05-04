@@ -9,9 +9,11 @@ import src.PizzaPedido.PizzaPedido;
 
 public class Metricas {
     private final List<PizzaPedido> pedidos;
+    //Constructor de la clase Metricas, agrega la lista de pizzas a la lista interna de la clase
     public Metricas(List<PizzaPedido> pedidos) {
         this.pedidos = pedidos;
     }
+    //Utiliza las metricas correspondientes del llamado desde el terminal
     public void ejecutar(String[] args) {
         List<String> metricas = Arrays.asList(args);
 
@@ -170,7 +172,4 @@ public class Metricas {
     System.out.println("Fecha con mayor venta en términos de dinero: " + fechaConMayorVenta.getKey() +
             ", Total de ventas en esa fecha: $" + fechaConMayorVenta.getValue());
 }
-
-
-    // Otros métodos para las métricas...
 }

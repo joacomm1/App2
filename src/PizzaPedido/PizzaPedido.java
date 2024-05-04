@@ -1,6 +1,8 @@
 package src.PizzaPedido;
 
 public class PizzaPedido {
+    //Se declaran las variables dentro de la clase, son privadas para que no se puedan modificar fuera de la clase
+
     private float pizza_id;
     private float order_id;
     private String pizza_name_id;
@@ -14,6 +16,7 @@ public class PizzaPedido {
     private String pizza_ingredients;
     private String pizza_name;
 
+    //Constructor de la clase
     public PizzaPedido(float pizza_id, float order_id, String pizza_name_id, float quantity, String order_date,
                        String order_time, float unit_price, float total_price, String pizza_size,
                        String pizza_category, String pizza_ingredients, String pizza_name) {
@@ -30,6 +33,8 @@ public class PizzaPedido {
         this.pizza_ingredients = pizza_ingredients;
         this.pizza_name = pizza_name;
     }
+
+    //Metodos get de las variables que permiten visualizar los datos fuera de la clase
     public float getPizzaId() {
         return pizza_id;
     }
